@@ -152,12 +152,16 @@ cython_debug/
 #.idea/
 
 
-!**/circle/*.prt
+preliminary-study/simulations/*
+in-depth/simulations/hexagon/*
+in-depth/simulations/square/*
+in-depth/simulations/test/*
+in-depth/simulations/circle/*
+in-depth/simulations/circle-18/*
+
+!**/*.prt
 !**/*.fem
 !**/*.sim
 !**/*GroupReport*
-
-#**/simulations/*
-
 
 gifs/*
