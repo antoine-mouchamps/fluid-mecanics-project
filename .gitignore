@@ -154,6 +154,7 @@ cython_debug/
 
 preliminary-study/simulations/*
 in-depth/simulations/hexagon/*
+in-depth/simulations/hexagon-18/*
 in-depth/simulations/square/*
 in-depth/simulations/test/*
 in-depth/simulations/circle/*
