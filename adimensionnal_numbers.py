@@ -52,18 +52,22 @@ def C_L(F, U, L):
     """
     return F/(U**2 *rho*(L*1)*(1/2))
 
+if(__name__ == '__main__'):
+    print("Preliminary Study:")
+    print(f"\t Re: {Reynolds(0.01, 0.3):.2f}")
+    print(f"\t St: {Strouhal(0.01, 0.3, 0.003968253968253968):.2f}")
+    print(f"\t C_D: {C_D(0.01945*10**(-3), 0.01, 0.3):.2f}")
+    print(f"\t C_L: {C_L(0.02213*10**(-3), 0.01, 0.9):.2f}")
 
-print("Preliminary Study:")
-print(f"\t Re: {Reynolds(0.01, 0.3):.2f}")
-print(f"\t St: {Strouhal(0.01, 0.3, 0.003968253968253968):.2f}")
-print(f"\t C_D: {C_D(0.01945*10**(-3), 0.01, 0.3):.2f}")
-print(f"\t C_L: {C_L(0.02213*10**(-3), 0.01, 0.9):.2f}")
+    print("Hexagonal Study:")
+    U1000 = 1000*viscosity/0.3
+    print(f"\t Re: {Reynolds(U1000, 0.3):.2f} for {U1000:.3f} m/s")
+    print(f"\t Re: {Reynolds(23, 0.3):.2f} for {U1000:.3f} m/s")
+    # print(f"\t C_D: {C_D(0.01945*10**(-3), 0.01, 0.3):.2f}")
+    # print(f"\t C_L: {C_L(0.02213*10**(-3), 0.01, 0.9):.2f}")
 
-print("Hexagonal Study:")
-U1000 = 1000*viscosity/0.3
-print(f"\t Re: {Reynolds(U1000, 0.3):.2f} for {U1000:.3f} m/s")
-print(f"\t Re: {Reynolds(23, 0.3):.2f} for {U1000:.3f} m/s")
-print(f"\t C_D: {C_D(0.01945*10**(-3), 0.01, 0.3):.2f}")
-print(f"\t C_L: {C_L(0.02213*10**(-3), 0.01, 0.9):.2f}")
-
-print(1000*viscosity/0.3)
+    print(Reynolds(0.001, 0.3))
+    print(Reynolds(0.01, 0.3))
+    print(Reynolds(0.1, 0.3))
+    print(Reynolds(1, 0.3))
+    print(Reynolds(10, 0.3))
