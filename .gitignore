@@ -154,15 +154,15 @@ cython_debug/
 
 preliminary-study/simulations/*
 in-depth/simulations/hexagon/*
-in-depth/simulations/hexagon-18/*
-in-depth/simulations/square/*
-in-depth/simulations/test/*
+in-depth/simulations/hexagon-18/Re-200/*
+in-depth/simulations/hexagon-18/Re-22000/*
+in-depth/simulations/hexagon-18/Re-430000/*
 in-depth/simulations/circle/*
 in-depth/simulations/circle-18/*
 
 !**/*.prt
 !**/*.fem
 !**/*.sim
-!**/*GroupReport*
+# !**/*GroupReport*
 
 gifs/*
