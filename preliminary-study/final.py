@@ -7,7 +7,7 @@ plt.rcParams.update({'font.size': 15})
 
 width = 0.025 # [m]
 
-file = open('results/preliminaryreport-final.csv')
+file = open('preliminary-study/results/report-final-3000.csv')
 csvreader = csv.reader(file)
 
 times = []
@@ -30,6 +30,7 @@ mean_lift = sum(lifts)/len(lifts)
 mean_drag = sum(drags)/len(drags)
 
 print(f'l:{mean_lift:.5f}, d:{mean_drag:.5f}')
+print(f'Cl:{mean_lift/(0.01**2 *1.255*(0.9*1)*(1/2))/1000:.3f}, Cd:{mean_drag/(0.01**2 *1.255*(0.3*1)*(1/2))/1000:.3f}')
     
 ax:Axes = None
 fig, ax = plt.subplots()
@@ -48,3 +49,6 @@ ax.set_ylabel(r'|Forces| $[mN/m]$')
 fig.savefig('forces-final-with-times.pdf', bbox_inches='tight')
 
 file.close()
+
+print('\nSteady:')
+print(f'Cl:{(0.000579796/width)/(0.01**2 *1.255*(0.9*1)*(1/2))/1000:.3f}, Cd:{(0.00049078/width)/(0.01**2 *1.255*(0.3*1)*(1/2))/1000:.3f}')

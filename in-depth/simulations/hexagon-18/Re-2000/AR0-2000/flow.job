@@ -1,0 +1,23 @@
+-1
+       902
+CFD Summary Information                                                         
+1.1                                                                             
+        -1
+        -1
+termination_criterion                    =          2
+number_of_iterations                     =          1
+u_momentum_residual_rms                  =   0.000000000000E+00
+v_momentum_residual_rms                  =   0.000000000000E+00
+w_momentum_residual_rms                  =   0.000000000000E+00
+mass_residual_rms                        =   0.000000000000E+00
+u_momentum_imbalance                     =   7.993776163989E-09
+v_momentum_imbalance                     =   3.977471622225E-10
+w_momentum_imbalance                     =   2.795311526650E-11
+mass_imbalance                           =   2.202652996662E-01
+normalize_mass_imbalance                 =          1
+tke_residual_rms                         =   0.000000000000E+00
+eps_residual_rms                         =   0.000000000000E+00
+tke_imbalance                            =   7.699426563587E-06
+eps_imbalance                            =   3.117299070245E-05
+END OF PARAMETERS
+-999
