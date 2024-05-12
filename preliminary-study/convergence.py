@@ -6,7 +6,7 @@ plt.rcParams.update({'font.size': 15})
 
 width = 0.025 # [m]
 
-file = open('results/preliminaryreport-h=5.csv')
+file = open('results/report-h=5.csv')
 csvreader = csv.reader(file)
 
 times = []
@@ -42,7 +42,7 @@ means_lift = []
 means_drag = []
 
 for height in heights:
-    file = open(f'results/preliminaryreport-h={height}.csv')
+    file = open(f'results/report-h={height}.csv')
     csvreader = csv.reader(file)
     times = []
     raw_lifts = []
@@ -67,15 +67,15 @@ for height in heights:
 ax:Axes = None
 fig, ax = plt.subplots()
 
-ax.plot(heights, means_lift, label=r'Portance $F_{Lift}$', marker="s", markerfacecolor='none')
-ax.plot(heights, means_drag, label=r'Trainée $F_{Drag}$', marker="s", markerfacecolor='none')
+ax.plot(heights, means_lift, label=r'Portance $|F_{Lift}|$', marker="s", markerfacecolor='none')
+ax.plot(heights, means_drag, label=r'Trainée $|F_{Drag}|$', marker="s", markerfacecolor='none')
 
 ax.legend()
 
 ax.set_xlim(left=0)
 ax.set_xlabel(r'Hauteurs $[m]$')
 ax.set_ylim(bottom=0.0)
-ax.set_ylabel(r'Forces $[mN/m]$')
+ax.set_ylabel(r'|Forces| $[mN/m]$')
 
 ax.grid(True)
 
@@ -86,7 +86,7 @@ means_drag = []
 
 lengths = [1, 3, 5, 7]
 for length in lengths:
-    file = open(f'results/preliminaryreport-h=5-l={length}.csv')
+    file = open(f'results/report-h=5-l={length}.csv')
     csvreader = csv.reader(file)
     times = []
     raw_lifts = []
@@ -115,15 +115,15 @@ for length in lengths:
 ax:Axes = None
 fig, ax = plt.subplots()
 
-ax.plot(lengths, means_lift, label=r'Portance $F_{Lift}$', marker="s", markerfacecolor='none')
-ax.plot(lengths, means_drag, label=r'Trainée $F_{Drag}$', marker="s", markerfacecolor='none')
+ax.plot(lengths, means_lift, label=r'Portance $|F_{Lift}|$', marker="s", markerfacecolor='none')
+ax.plot(lengths, means_drag, label=r'Trainée $|F_{Drag}|$', marker="s", markerfacecolor='none')
 
 ax.legend()
 
 ax.set_xlim(left=0)
 ax.set_xlabel(r"Longueur d'entrée $[m]$")
 ax.set_ylim(bottom=0.0, top=0.025)
-ax.set_ylabel(r'Forces $[mN/m]$')
+ax.set_ylabel(r'|Forces| $[mN/m]$')
 
 ax.grid(True)
 

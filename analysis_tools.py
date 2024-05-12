@@ -46,7 +46,7 @@ def analysis(path, directory, file, U, t_treshold, dt, y_lims=[-5, 5], D=0.3, L=
     #             arrowprops = dict(facecolor='black', shrink=0.05)
     #             )
     ax.set_xlabel(r'Fréquence [Hz]')
-    ax.set_ylabel(r'$PSD_{F_{Lift}}\;\mathrm{[(mN/m)^2]}$')
+    ax.set_ylabel(r'$PSD_{F_{Lift}}\;\mathrm{\left[(mN/m)^2\right]}$')
     
     ax.grid()
     
